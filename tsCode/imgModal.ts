@@ -52,6 +52,11 @@ export function imgModal() {
   closeModal(CLOSE_MODAL_BTN);
   closeModal(THE_MODAL);
 
+  //Stopping the propagation/bubbling of close event when clicking on modal image
+  MODAL_IMAGE.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+
   //Collecting all images with class "imgModal" into an Array
   let imgs = Array.from(
     document.getElementsByClassName(
