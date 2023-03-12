@@ -1,8 +1,11 @@
 export function imgModal() {
     //inject CSS
     document.body.innerHTML += `<style> 
-.imgModal {
+    .imgModal {
       cursor: pointer;
+    }
+    .imgModal:hover{
+      border:1px solid #00000080;
     }
     #theModal {
       position: fixed;
